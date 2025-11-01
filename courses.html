@@ -5,26 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>课程 - 简说学堂</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/courses.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="简说学堂" class="logo">
-                    <span class="brand-name">简说学堂</span>
-                </a>
+                <a href="index.html">简说学堂</a>
             </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">首页</a>
-                <a href="courses.html" class="nav-link active">课程</a>
-                <a href="docs.html" class="nav-link">文档</a>
-                <a href="blog.html" class="nav-link">博客</a>
-            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="courses.html" class="active">课程</a></li>
+                <li><a href="docs.html">文档</a></li>
+                <li><a href="blog.html">博客</a></li>
+            </ul>
             <div class="nav-toggle">
                 <span></span>
                 <span></span>
@@ -33,339 +27,108 @@
         </div>
     </nav>
 
-    <!-- 主要内容 -->
-    <main>
-        <section class="courses-header">
-            <div class="container">
-                <h1 class="page-title">精品课程</h1>
-                <p class="page-subtitle">系统化的学习路径，从入门到精通</p>
+    <section class="page-header">
+        <div class="container">
+            <h1>课程中心</h1>
+            <p>精选IT课程，助您系统提升技能</p>
+        </div>
+    </section>
 
-                <!-- 筛选器 -->
-                <div class="course-filters">
-                    <button class="filter-btn active" data-level="all">全部</button>
-                    <button class="filter-btn" data-level="beginner">初级</button>
-                    <button class="filter-btn" data-level="intermediate">中级</button>
-                    <button class="filter-btn" data-level="advanced">高级</button>
-                </div>
+    <section class="filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全部课程</button>
+                <button class="filter-btn" data-filter="初级">初级</button>
+                <button class="filter-btn" data-filter="中级">中级</button>
+                <button class="filter-btn" data-filter="高级">高级</button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="courses-content">
-            <div class="container">
-                <div class="courses-grid" id="coursesGrid">
-                    <!-- 初级课程 -->
-                    <div class="course-card" data-level="beginner">
-                        <div class="course-header">
-                            <div class="course-level beginner">初级</div>
-                            <div class="course-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                        </div>
-                        <div class="course-body">
-                            <h3 class="course-title">结合C语言、Java语言，学习Go语言</h3>
-                            <p class="course-description">通过对比学习快速掌握Go语言，适合有C或Java基础的开发者</p>
-                            <div class="course-info">
-                                <div class="course-duration">
-                                    <i class="fas fa-clock"></i>
-                                    <span>20小时</span>
-                                </div>
-                                <div class="course-students">
-                                    <i class="fas fa-users"></i>
-                                    <span>1.2k学员</span>
-                                </div>
-                            </div>
-                            <ul class="course-highlights">
-                                <li>Go语言基础语法与特性</li>
-                                <li>与C、Java语言对比学习</li>
-                                <li>实战项目开发</li>
-                            </ul>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-price">¥99</div>
-                            <a href="https://www.bilibili.com/cheese/play/ss20866?csource=private_space_class_null&spm_id_from=333.1387.0.0"
-                               class="btn btn-primary" target="_blank">立即学习</a>
-                        </div>
+    <section class="courses">
+        <div class="container">
+            <div class="courses-grid">
+                <div class="course-card" data-level="初级">
+                    <div class="course-badge">初级</div>
+                    <h3>结合C语言、Java语言，学习Go语言</h3>
+                    <p class="course-description">通过对比学习的方式，深入理解Go语言的特性和应用场景，适合有一定编程基础的学员。</p>
+                    <div class="course-footer">
+                        <span class="course-price">¥99</span>
+                        <a href="https://www.bilibili.com/cheese/play/ss20866?csource=private_space_class_null&spm_id_from=333.1387.0.0" class="btn btn-primary" target="_blank">立即学习</a>
                     </div>
+                </div>
 
-                    <div class="course-card" data-level="beginner">
-                        <div class="course-header">
-                            <div class="course-level beginner">初级</div>
-                            <div class="course-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                        </div>
-                        <div class="course-body">
-                            <h3 class="course-title">零基础AI开发指南</h3>
-                            <p class="course-description">入门人工智能开发的基础课程，适合零基础学员</p>
-                            <div class="course-info">
-                                <div class="course-duration">
-                                    <i class="fas fa-clock"></i>
-                                    <span>25小时</span>
-                                </div>
-                                <div class="course-students">
-                                    <i class="fas fa-users"></i>
-                                    <span>2.1k学员</span>
-                                </div>
-                            </div>
-                            <ul class="course-highlights">
-                                <li>AI基础概念与原理</li>
-                                <li>机器学习算法入门</li>
-                                <li>实战AI项目开发</li>
-                            </ul>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-price">¥99</div>
-                            <a href="https://www.bilibili.com/cheese/play/ss10591?csource=private_space_class_null&spm_id_from=333.1387.0.0"
-                               class="btn btn-primary" target="_blank">立即学习</a>
-                        </div>
+                <div class="course-card" data-level="初级">
+                    <div class="course-badge">初级</div>
+                    <h3>零基础AI开发指南</h3>
+                    <p class="course-description">从零开始学习AI开发，无需编程基础，带您进入人工智能的神奇世界。</p>
+                    <div class="course-footer">
+                        <span class="course-price">¥99</span>
+                        <a href="https://www.bilibili.com/cheese/play/ss10591?csource=private_space_class_null&spm_id_from=333.1387.0.0" class="btn btn-primary" target="_blank">立即学习</a>
                     </div>
+                </div>
 
-                    <!-- 中级课程 -->
-                    <div class="course-card" data-level="intermediate">
-                        <div class="course-header">
-                            <div class="course-level intermediate">中级</div>
-                            <div class="course-icon">
-                                <i class="fas fa-dharmachakra"></i>
-                            </div>
-                        </div>
-                        <div class="course-body">
-                            <h3 class="course-title">Kubernetes/K8s核心开发从入门到精通</h3>
-                            <p class="course-description">容器编排技术的完整学习路径，掌握云原生技术栈</p>
-                            <div class="course-info">
-                                <div class="course-duration">
-                                    <i class="fas fa-clock"></i>
-                                    <span>30小时</span>
-                                </div>
-                                <div class="course-students">
-                                    <i class="fas fa-users"></i>
-                                    <span>1.8k学员</span>
-                                </div>
-                            </div>
-                            <ul class="course-highlights">
-                                <li>K8s核心概念与架构</li>
-                                <li>容器编排与管理</li>
-                                <li>微服务部署实战</li>
-                            </ul>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-price">¥99</div>
-                            <a href="https://www.bilibili.com/cheese/play/ss5715?csource=private_space_class_null&spm_id_from=333.1387.0.0"
-                               class="btn btn-primary" target="_blank">立即学习</a>
-                        </div>
+                <div class="course-card" data-level="中级">
+                    <div class="course-badge">中级</div>
+                    <h3>Kubernetes/K8s核心开发从入门到精通</h3>
+                    <p class="course-description">深入学习Kubernetes容器编排平台，从基础概念到高级应用，全面掌握K8s核心开发技能。</p>
+                    <div class="course-footer">
+                        <span class="course-price">¥99</span>
+                        <a href="https://www.bilibili.com/cheese/play/ss5715?csource=private_space_class_null&spm_id_from=333.1387.0.0" class="btn btn-primary" target="_blank">立即学习</a>
                     </div>
+                </div>
 
-                    <!-- 高级课程 -->
-                    <div class="course-card" data-level="advanced">
-                        <div class="course-header">
-                            <div class="course-level advanced">高级</div>
-                            <div class="course-icon">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                        </div>
-                        <div class="course-body">
-                            <h3 class="course-title">Linux网络协议栈从应用层到内核层</h3>
-                            <p class="course-description">深入理解Linux网络协议栈，从应用层到底层内核实现</p>
-                            <div class="course-info">
-                                <div class="course-duration">
-                                    <i class="fas fa-clock"></i>
-                                    <span>40小时</span>
-                                </div>
-                                <div class="course-students">
-                                    <i class="fas fa-users"></i>
-                                    <span>980学员</span>
-                                </div>
-                            </div>
-                            <ul class="course-highlights">
-                                <li>TCP/IP协议栈深入解析</li>
-                                <li>内核网络子系统实现</li>
-                                <li>网络性能调优实战</li>
-                            </ul>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-price">¥109</div>
-                            <a href="https://www.bilibili.com/cheese/play/ss5362?csource=private_space_class_null&spm_id_from=333.1387.0.0"
-                               class="btn btn-primary" target="_blank">立即学习</a>
-                        </div>
+                <div class="course-card" data-level="高级">
+                    <div class="course-badge">高级</div>
+                    <h3>linux网络协议栈从应用层到内核层</h3>
+                    <p class="course-description">深入Linux网络协议栈的实现机制，从应用层到内核层，全面理解网络编程的底层原理。</p>
+                    <div class="course-footer">
+                        <span class="course-price">¥109</span>
+                        <a href="https://www.bilibili.com/cheese/play/ss5362?csource=private_space_class_null&spm_id_from=333.1387.0.0" class="btn btn-primary" target="_blank">立即学习</a>
                     </div>
+                </div>
 
-                    <div class="course-card" data-level="advanced">
-                        <div class="course-header">
-                            <div class="course-level advanced">高级</div>
-                            <div class="course-icon">
-                                <i class="fas fa-memory"></i>
-                            </div>
-                        </div>
-                        <div class="course-body">
-                            <h3 class="course-title">从Linux内核到应用层，深入浅出内存管理和调试</h3>
-                            <p class="course-description">系统学习Linux内存管理机制，掌握高级调试技术</p>
-                            <div class="course-info">
-                                <div class="course-duration">
-                                    <i class="fas fa-clock"></i>
-                                    <span>35小时</span>
-                                </div>
-                                <div class="course-students">
-                                    <i class="fas fa-users"></i>
-                                    <span>1.1k学员</span>
-                                </div>
-                            </div>
-                            <ul class="course-highlights">
-                                <li>Linux内核内存管理</li>
-                                <li>应用层内存优化</li>
-                                <li>内存调试工具与技术</li>
-                            </ul>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-price">¥109</div>
-                            <a href="https://www.bilibili.com/cheese/play/ss3125?csource=private_space_class_null&spm_id_from=333.1387.0.0"
-                               class="btn btn-primary" target="_blank">立即学习</a>
-                        </div>
+                <div class="course-card" data-level="高级">
+                    <div class="course-badge">高级</div>
+                    <h3>从linux内核到应用层，深入浅出内存管理和调试</h3>
+                    <p class="course-description">全面掌握Linux内存管理机制，从内核实现到应用层调试，深入理解内存管理的高级技巧。</p>
+                    <div class="course-footer">
+                        <span class="course-price">¥109</span>
+                        <a href="https://www.bilibili.com/cheese/play/ss3125?csource=private_space_class_null&spm_id_from=333.1387.0.0" class="btn btn-primary" target="_blank">立即学习</a>
                     </div>
+                </div>
 
-                    <div class="course-card" data-level="advanced">
-                        <div class="course-header">
-                            <div class="course-level advanced">高级</div>
-                            <div class="course-icon">
-                                <i class="fas fa-tachometer-alt"></i>
-                            </div>
-                        </div>
-                        <div class="course-body">
-                            <h3 class="course-title">轻松玩转Linux下的性能调优，开发运维必备！</h3>
-                            <p class="course-description">Linux系统性能调优实战课程，提升开发和运维效率</p>
-                            <div class="course-info">
-                                <div class="course-duration">
-                                    <i class="fas fa-clock"></i>
-                                    <span>28小时</span>
-                                </div>
-                                <div class="course-students">
-                                    <i class="fas fa-users"></i>
-                                    <span>1.5k学员</span>
-                                </div>
-                            </div>
-                            <ul class="course-highlights">
-                                <li>系统性能监控与分析</li>
-                                <li>CPU、内存、I/O调优</li>
-                                <li>实战性能问题解决</li>
-                            </ul>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-price">¥109</div>
-                            <a href="https://www.bilibili.com/cheese/play/ss1706?csource=private_space_class_null&spm_id_from=333.1387.0.0"
-                               class="btn btn-primary" target="_blank">立即学习</a>
-                        </div>
+                <div class="course-card" data-level="高级">
+                    <div class="course-badge">高级</div>
+                    <h3>轻松玩转linux下的性能调优，开发运维必备！</h3>
+                    <p class="course-description">学习Linux系统性能调优的各种技巧和方法，是开发人员和运维人员必备的高级技能。</p>
+                    <div class="course-footer">
+                        <span class="course-price">¥109</span>
+                        <a href="https://www.bilibili.com/cheese/play/ss1706?csource=private_space_class_null&spm_id_from=333.1387.0.0" class="btn btn-primary" target="_blank">立即学习</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 学习路径 -->
-        <section class="learning-path">
-            <div class="container">
-                <h2 class="section-title">学习路径推荐</h2>
-                <div class="path-grid">
-                    <div class="path-card">
-                        <div class="path-header">
-                            <h3>初级开发路径</h3>
-                            <div class="path-badge beginner">入门</div>
-                        </div>
-                        <div class="path-content">
-                            <div class="path-steps">
-                                <div class="path-step">
-                                    <div class="step-number">1</div>
-                                    <div class="step-content">
-                                        <h4>Go语言基础</h4>
-                                        <p>结合C、Java对比学习</p>
-                                    </div>
-                                </div>
-                                <div class="path-step">
-                                    <div class="step-number">2</div>
-                                    <div class="step-content">
-                                        <h4>AI开发入门</h4>
-                                        <p>零基础学习人工智能</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="path-card">
-                        <div class="path-header">
-                            <h3>中级进阶路径</h3>
-                            <div class="path-badge intermediate">进阶</div>
-                        </div>
-                        <div class="path-content">
-                            <div class="path-steps">
-                                <div class="path-step">
-                                    <div class="step-number">1</div>
-                                    <div class="step-content">
-                                        <h4>容器化技术</h4>
-                                        <p>掌握K8s核心技能</p>
-                                    </div>
-                                </div>
-                                <div class="path-step">
-                                    <div class="step-number">2</div>
-                                    <div class="step-content">
-                                        <h4>性能调优基础</h4>
-                                        <p>系统性能优化入门</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="path-card">
-                        <div class="path-header">
-                            <h3>高级专家路径</h3>
-                            <div class="path-badge advanced">专家</div>
-                        </div>
-                        <div class="path-content">
-                            <div class="path-steps">
-                                <div class="path-step">
-                                    <div class="step-number">1</div>
-                                    <div class="step-content">
-                                        <h4>内核深度理解</h4>
-                                        <p>网络协议栈与内存管理</p>
-                                    </div>
-                                </div>
-                                <div class="path-step">
-                                    <div class="step-number">2</div>
-                                    <div class="step-content">
-                                        <h4>性能调优精通</h4>
-                                        <p>高级系统优化技术</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>简说学堂</h3>
-                    <p>专业技术学习平台，助力技术成长</p>
+                    <h4>简说学堂</h4>
+                    <p>专业的IT学习平台，助力您的技术成长</p>
                 </div>
                 <div class="footer-section">
                     <h4>快速链接</h4>
                     <ul>
-                        <li><a href="index.html">首页</a></li>
                         <li><a href="courses.html">课程</a></li>
                         <li><a href="docs.html">文档</a></li>
                         <li><a href="blog.html">博客</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>联系方式</h4>
-                    <p>Email: info@jianshuo.com</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                    <h4>联系我们</h4>
+                    <p>Email: contact@jianxue.com</p>
                 </div>
             </div>
             <div class="footer-bottom">

@@ -7,24 +7,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/docs.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="简说学堂" class="logo">
-                    <span class="brand-name">简说学堂</span>
-                </a>
+                <a href="index.html">简说学堂</a>
             </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">首页</a>
-                <a href="courses.html" class="nav-link">课程</a>
-                <a href="docs.html" class="nav-link active">文档</a>
-                <a href="blog.html" class="nav-link">博客</a>
-            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="courses.html">课程</a></li>
+                <li><a href="docs.html" class="active">文档</a></li>
+                <li><a href="blog.html">博客</a></li>
+            </ul>
             <div class="nav-toggle">
                 <span></span>
                 <span></span>
@@ -33,504 +28,238 @@
         </div>
     </nav>
 
-    <!-- 文档页面主体 -->
-    <div class="docs-container">
-        <!-- 侧边栏 -->
-        <aside class="docs-sidebar">
-            <div class="sidebar-content">
-                <div class="search-box">
-                    <input type="text" id="docs-search" placeholder="搜索文档...">
-                    <i class="fas fa-search"></i>
-                </div>
-
-                <nav class="docs-nav">
-                    <div class="nav-section">
-                        <h4>快速开始</h4>
-                        <ul>
-                            <li><a href="#getting-started" class="nav-link active">安装指南</a></li>
-                            <li><a href="#first-steps" class="nav-link">第一步</a></li>
-                            <li><a href="#basic-concepts" class="nav-link">基础概念</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="nav-section">
-                        <h4>编程语言</h4>
-                        <ul>
-                            <li><a href="#go-language" class="nav-link">Go语言</a></li>
-                            <li><a href="#c-language" class="nav-link">C语言</a></li>
-                            <li><a href="#java-language" class="nav-link">Java语言</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="nav-section">
-                        <h4>系统技术</h4>
-                        <ul>
-                            <li><a href="#linux-kernel" class="nav-link">Linux内核</a></li>
-                            <li><a href="#network-stack" class="nav-link">网络协议栈</a></li>
-                            <li><a href="#memory-management" class="nav-link">内存管理</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="nav-section">
-                        <h4>容器技术</h4>
-                        <ul>
-                            <li><a href="#kubernetes" class="nav-link">Kubernetes</a></li>
-                            <li><a href="#docker" class="nav-link">Docker</a></li>
-                            <li><a href="#microservices" class="nav-link">微服务</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="nav-section">
-                        <h4>AI开发</h4>
-                        <ul>
-                            <li><a href="#ai-basics" class="nav-link">AI基础</a></li>
-                            <li><a href="#machine-learning" class="nav-link">机器学习</a></li>
-                            <li><a href="#deep-learning" class="nav-link">深度学习</a></li>
-                        </ul>
-                    </div>
-                </nav>
+    <div class="docs-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>文档导航</h3>
             </div>
-        </aside>
-
-        <!-- 主内容区 -->
-        <main class="docs-main">
-            <div class="docs-content">
-                <!-- 概述部分 -->
-                <section id="getting-started" class="doc-section">
-                    <h1>简说学堂文档中心</h1>
-                    <p class="doc-intro">
-                        欢迎来到简说学堂文档中心！这里提供了我们所有课程的详细文档、教程和参考资料，
-                        帮助您更好地理解和掌握相关技术知识。
-                    </p>
-
-                    <div class="quick-links">
-                        <h3>快速导航</h3>
-                        <div class="links-grid">
-                            <a href="#go-language" class="link-card">
-                                <i class="fas fa-code"></i>
-                                <h4>Go语言文档</h4>
-                                <p>Go语言完整学习资料</p>
-                            </a>
-                            <a href="#kubernetes" class="link-card">
-                                <i class="fas fa-dharmachakra"></i>
-                                <h4>K8s指南</h4>
-                                <p>容器编排技术详解</p>
-                            </a>
-                            <a href="#linux-kernel" class="link-card">
-                                <i class="fab fa-linux"></i>
-                                <h4>Linux内核</h4>
-                                <p>系统底层技术解析</p>
-                            </a>
-                            <a href="#ai-basics" class="link-link">
-                                <i class="fas fa-brain"></i>
-                                <h4>AI开发</h4>
-                                <p>人工智能技术指南</p>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Go语言文档 -->
-                <section id="go-language" class="doc-section">
-                    <h2>Go语言开发指南</h2>
-                    <p class="section-desc">
-                        Go语言是由Google开发的开源编程语言，专为构建简洁、可靠、高效的软件而设计。
-                    </p>
-
-                    <div class="doc-content-block">
-                        <h3>环境安装</h3>
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span>Bash</span>
-                                <button class="copy-btn" data-clipboard-text="wget https://golang.org/dl/go1.21.0.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.21.0.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin">
-                                    <i class="fas fa-copy"></i>
-                                </button>
-                            </div>
-                            <pre><code># 下载并安装Go
-wget https://golang.org/dl/go1.21.0.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.21.0.linux-amd64.tar.gz
-
-# 设置环境变量
-export PATH=$PATH:/usr/local/go/bin</code></pre>
-                        </div>
-
-                        <h3>Hello World示例</h3>
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span>Go</span>
-                                <button class="copy-btn" data-clipboard-text="package main
-
-import &quot;fmt&quot;
-
-func main() {
-    fmt.Println(&quot;Hello, 简说学堂!&quot;)
-}">
-                                    <i class="fas fa-copy"></i>
-                                </button>
-                            </div>
-                            <pre><code>package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, 简说学堂!")
-}</code></pre>
-                        </div>
-
-                        <h3>核心特性</h3>
-                        <ul class="feature-list">
-                            <li><strong>简洁语法</strong> - 易于学习和使用</li>
-                            <li><strong>并发支持</strong> - 原生支持goroutine和channel</li>
-                            <li><strong>垃圾回收</strong> - 自动内存管理</li>
-                            <li><strong>静态编译</strong> - 生成单一可执行文件</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Kubernetes文档 -->
-                <section id="kubernetes" class="doc-section">
-                    <h2>Kubernetes容器编排</h2>
-                    <p class="section-desc">
-                        Kubernetes是一个开源的容器编排平台，用于自动化容器化应用的部署、扩展和管理。
-                    </p>
-
-                    <div class="doc-content-block">
-                        <h3>基本概念</h3>
-                        <div class="concept-cards">
-                            <div class="concept-card">
-                                <h4>Pod</h4>
-                                <p>Kubernetes中最小的可部署单元，包含一个或多个容器</p>
-                            </div>
-                            <div class="concept-card">
-                                <h4>Service</h4>
-                                <p>为一组Pod提供稳定的网络访问接口</p>
-                            </div>
-                            <div class="concept-card">
-                                <h4>Deployment</h4>
-                                <p>管理Pod的部署和更新，确保应用的高可用性</p>
-                            </div>
-                        </div>
-
-                        <h3>部署示例</h3>
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span>YAML</span>
-                                <button class="copy-btn" data-clipboard-text="apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.21
-        ports:
-        - containerPort: 80">
-                                    <i class="fas fa-copy"></i>
-                                </button>
-                            </div>
-                            <pre><code>apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.21
-        ports:
-        - containerPort: 80</code></pre>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Linux内核文档 -->
-                <section id="linux-kernel" class="doc-section">
-                    <h2>Linux内核技术</h2>
-                    <p class="section-desc">
-                        深入了解Linux内核的架构、子系统和实现原理。
-                    </p>
-
-                    <div class="doc-content-block">
-                        <h3>内核架构</h3>
-                        <div class="architecture-diagram">
-                            <div class="arch-layer user-space">
-                                <h4>用户空间</h4>
-                                <p>应用程序、库函数</p>
-                            </div>
-                            <div class="arch-layer system-call">
-                                <h4>系统调用接口</h4>
-                                <p>系统调用、信号</p>
-                            </div>
-                            <div class="arch-layer kernel-space">
-                                <h4>内核空间</h4>
-                                <div class="kernel-components">
-                                    <span>进程管理</span>
-                                    <span>内存管理</span>
-                                    <span>文件系统</span>
-                                    <span>网络协议栈</span>
-                                </div>
-                            </div>
-                            <div class="arch-layer hardware">
-                                <h4>硬件层</h4>
-                                <p>CPU、内存、设备</p>
-                            </div>
-                        </div>
-
-                        <h3>内存管理</h3>
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span>C</span>
-                                <button class="copy-btn" data-clipboard-text="#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;unistd.h&gt;
-
-int main() {
-    // 获取页面大小
-    long page_size = sysconf(_SC_PAGESIZE);
-    printf(&quot;Page size: %ld bytes\n&quot;, page_size);
-
-    // 分配内存
-    void *ptr = malloc(1024);
-    if (ptr) {
-        printf(&quot;Memory allocated at: %p\n&quot;, ptr);
-        free(ptr);
-    }
-
-    return 0;
-}">
-                                    <i class="fas fa-copy"></i>
-                                </button>
-                            </div>
-                            <pre><code>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;unistd.h&gt;
-
-int main() {
-    // 获取页面大小
-    long page_size = sysconf(_SC_PAGESIZE);
-    printf("Page size: %ld bytes\n", page_size);
-
-    // 分配内存
-    void *ptr = malloc(1024);
-    if (ptr) {
-        printf("Memory allocated at: %p\n", ptr);
-        free(ptr);
-    }
-
-    return 0;
-}</code></pre>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- AI开发文档 -->
-                <section id="ai-basics" class="doc-section">
-                    <h2>AI开发基础</h2>
-                    <p class="section-desc">
-                        人工智能开发的基础知识、工具和实践指南。
-                    </p>
-
-                    <div class="doc-content-block">
-                        <h3>机器学习流程</h3>
-                        <div class="workflow-steps">
-                            <div class="workflow-step">
-                                <div class="step-number">1</div>
-                                <h4>数据收集</h4>
-                                <p>收集和准备训练数据</p>
-                            </div>
-                            <div class="workflow-step">
-                                <div class="step-number">2</div>
-                                <h4>特征工程</h4>
-                                <p>提取和选择相关特征</p>
-                            </div>
-                            <div class="workflow-step">
-                                <div class="step-number">3</div>
-                                <h4>模型训练</h4>
-                                <p>使用算法训练模型</p>
-                            </div>
-                            <div class="workflow-step">
-                                <div class="step-number">4</div>
-                                <h4>模型评估</h4>
-                                <p>评估模型性能</p>
-                            </div>
-                        </div>
-
-                        <h3>Python示例</h3>
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span>Python</span>
-                                <button class="copy-btn" data-clipboard-text="import numpy as np
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
-
-# 生成示例数据
-X = np.array([[1], [2], [3], [4], [5]])
-y = np.array([2, 4, 6, 8, 10])
-
-# 分割训练测试集
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-
-# 训练模型
-model = LinearRegression()
-model.fit(X_train, y_train)
-
-# 预测
-predictions = model.predict(X_test)
-print(f&quot;Predictions: {predictions}&quot;)">
-                                    <i class="fas fa-copy"></i>
-                                </button>
-                            </div>
-                            <pre><code>import numpy as np
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
-
-# 生成示例数据
-X = np.array([[1], [2], [3], [4], [5]])
-y = np.array([2, 4, 6, 8, 10])
-
-# 分割训练测试集
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-
-# 训练模型
-model = LinearRegression()
-model.fit(X_train, y_train)
-
-# 预测
-predictions = model.predict(X_test)
-print(f"Predictions: {predictions}")</code></pre>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 性能调优文档 -->
-                <section id="performance-tuning" class="doc-section">
-                    <h2>系统性能调优</h2>
-                    <p class="section-desc">
-                        Linux系统性能监控、分析和调优的实用技巧。
-                    </p>
-
-                    <div class="doc-content-block">
-                        <h3>常用监控命令</h3>
-                        <div class="command-list">
-                            <div class="command-item">
-                                <code>top</code>
-                                <p>实时查看系统进程和资源使用情况</p>
-                            </div>
-                            <div class="command-item">
-                                <code>htop</code>
-                                <p>增强版的top，提供更友好的界面</p>
-                            </div>
-                            <div class="command-item">
-                                <code>vmstat</code>
-                                <p>查看系统虚拟内存统计信息</p>
-                            </div>
-                            <div class="command-item">
-                                <code>iostat</code>
-                                <p>监控CPU和I/O设备使用情况</p>
-                            </div>
-                        </div>
-
-                        <h3>性能分析示例</h3>
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span>Bash</span>
-                                <button class="copy-btn" data-clipboard-text="# 查看系统负载
-uptime
-
-# 查看内存使用
-free -h
-
-# 查看磁盘I/O
-iostat -x 1
-
-# 查看网络连接
-netstat -an | grep ESTABLISHED | wc -l">
-                                    <i class="fas fa-copy"></i>
-                                </button>
-                            </div>
-                            <pre><code># 查看系统负载
-uptime
-
-# 查看内存使用
-free -h
-
-# 查看磁盘I/O
-iostat -x 1
-
-# 查看网络连接
-netstat -an | grep ESTABLISHED | wc -l</code></pre>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- 页面目录 -->
-            <aside class="docs-toc">
-                <div class="toc-header">
-                    <h4>页面目录</h4>
-                </div>
-                <nav class="toc-nav" id="tableOfContents">
-                    <!-- 动态生成 -->
-                </nav>
-            </aside>
-        </main>
-    </div>
-
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>简说学堂</h3>
-                    <p>专业技术学习平台，助力技术成长</p>
-                </div>
-                <div class="footer-section">
-                    <h4>快速链接</h4>
-                    <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="courses.html">课程</a></li>
-                        <li><a href="docs.html">文档</a></li>
-                        <li><a href="blog.html">博客</a></li>
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <h4 class="nav-group-title">入门指南</h4>
+                    <ul class="nav-list">
+                        <li><a href="#getting-started">快速开始</a></li>
+                        <li><a href="#installation">安装指南</a></li>
+                        <li><a href="#basic-tutorial">基础教程</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>联系方式</h4>
-                    <p>Email: info@jianshuo.com</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                <div class="nav-group">
+                    <h4 class="nav-group-title">核心概念</h4>
+                    <ul class="nav-list">
+                        <li><a href="#fundamentals">基本概念</a></li>
+                        <li><a href="#architecture">架构设计</a></li>
+                        <li><a href="#best-practices">最佳实践</a></li>
+                    </ul>
                 </div>
+                <div class="nav-group">
+                    <h4 class="nav-group-title">进阶教程</h4>
+                    <ul class="nav-list">
+                        <li><a href="#advanced-topics">高级主题</a></li>
+                        <li><a href="#performance">性能优化</a></li>
+                        <li><a href="#troubleshooting">故障排除</a></li>
+                    </ul>
+                </div>
+                <div class="nav-group">
+                    <h4 class="nav-group-title">FAQ</h4>
+                    <ul class="nav-list">
+                        <li><a href="#common-questions">常见问题</a></li>
+                        <li><a href="#support">技术支持</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="docs-content">
+            <div class="docs-header">
+                <h1>简说学堂文档</h1>
+                <p>全面的学习指南和参考资料</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 简说学堂. 保留所有权利.</p>
+
+            <div class="doc-section" id="getting-started">
+                <h2>快速开始</h2>
+                <p>欢迎来到简说学堂！本指南将帮助您快速上手我们的学习平台。</p>
+
+                <h3>第一步：选择课程</h3>
+                <p>根据您的技能水平和学习目标，从我们的课程库中选择合适的课程。我们提供从初级到高级的完整课程体系。</p>
+
+                <h3>第二步：制定学习计划</h3>
+                <p>根据课程内容和您的空闲时间，制定合理的学习计划。建议每周至少投入5-10小时进行学习。</p>
+
+                <h3>第三步：开始学习</h3>
+                <p>跟随课程进度，认真完成每个章节的学习和练习。遇到问题可以查看文档或联系我们的技术支持团队。</p>
             </div>
-        </div>
-    </footer>
+
+            <div class="doc-section" id="installation">
+                <h2>安装指南</h2>
+                <p>在使用我们的课程之前，您需要准备一些基础的开发环境。</p>
+
+                <h3>环境要求</h3>
+                <ul>
+                    <li>一台能够访问互联网的计算机</li>
+                    <li>现代浏览器（Chrome、Firefox、Safari、Edge）</li>
+                    <li>根据课程需要安装相应的开发工具</li>
+                </ul>
+
+                <h3>推荐工具</h3>
+                <ul>
+                    <li>代码编辑器：VS Code、IntelliJ IDEA 等</li>
+                    <li>终端工具：iTerm2（Mac）、Windows Terminal（Windows）</li>
+                    <li>版本控制：Git</li>
+                </ul>
+            </div>
+
+            <div class="doc-section" id="basic-tutorial">
+                <h2>基础教程</h2>
+                <p>如果您是编程新手，建议从我们的《零基础AI开发指南》开始。</p>
+
+                <h3>学习路径</h3>
+                <ol>
+                    <li>了解基本概念和术语</li>
+                    <li>学习编程基础语法</li>
+                    <li>实践简单的项目</li>
+                    <li>逐步深入高级主题</li>
+                </ol>
+
+                <h3>学习建议</h3>
+                <ul>
+                    <li>理论与实践并重</li>
+                    <li>多动手编写代码</li>
+                    <li>加入学习社区交流</li>
+                    <li>定期复习巩固知识</li>
+                </ul>
+            </div>
+
+            <div class="doc-section" id="fundamentals">
+                <h2>基本概念</h2>
+                <p>深入理解IT领域的核心概念，为深入学习打下坚实基础。</p>
+
+                <h3>编程范式</h3>
+                <p>了解不同的编程范式，包括面向过程、面向对象、函数式编程等。</p>
+
+                <h3>数据结构与算法</h3>
+                <p>掌握常见的数据结构和算法，这是程序员的基本功。</p>
+
+                <h3>系统设计</h3>
+                <p>学习如何设计可扩展、可维护的软件系统。</p>
+            </div>
+
+            <div class="doc-section" id="architecture">
+                <h2>架构设计</h2>
+                <p>学习如何设计高质量的软件架构。</p>
+
+                <h3>常见架构模式</h3>
+                <ul>
+                    <li>MVC架构</li>
+                    <li>微服务架构</li>
+                    <li>事件驱动架构</li>
+                </ul>
+
+                <h3>设计原则</h3>
+                <ul>
+                    <li>SOLID原则</li>
+                    <li>DRY原则</li>
+                    <li>KISS原则</li>
+                </ul>
+            </div>
+
+            <div class="doc-section" id="best-practices">
+                <h2>最佳实践</h2>
+                <p>遵循行业最佳实践，编写高质量的代码。</p>
+
+                <h3>代码规范</h3>
+                <ul>
+                    <li>统一的代码风格</li>
+                    <li>清晰的命名规范</li>
+                    <li>合理的代码注释</li>
+                </ul>
+
+                <h3>测试策略</h3>
+                <ul>
+                    <li>单元测试</li>
+                    <li>集成测试</li>
+                    <li>端到端测试</li>
+                </ul>
+            </div>
+
+            <div class="doc-section" id="advanced-topics">
+                <h2>高级主题</h2>
+                <p>探索IT领域的高级技术和概念。</p>
+
+                <h3>性能优化</h3>
+                <p>学习如何优化应用程序的性能。</p>
+
+                <h3>安全性</h3>
+                <p>了解如何构建安全的应用程序。</p>
+
+                <h3>扩展性</h3>
+                <p>设计可扩展的系统架构。</p>
+            </div>
+
+            <div class="doc-section" id="performance">
+                <h2>性能优化</h2>
+                <p>掌握各种性能优化技巧。</p>
+
+                <h3>代码层面优化</h3>
+                <ul>
+                    <li>算法优化</li>
+                    <li>数据结构选择</li>
+                    <li>缓存策略</li>
+                </ul>
+
+                <h3>系统层面优化</h3>
+                <ul>
+                    <li>数据库优化</li>
+                    <li>网络优化</li>
+                    <li>系统调优</li>
+                </ul>
+            </div>
+
+            <div class="doc-section" id="troubleshooting">
+                <h2>故障排除</h2>
+                <p>学习如何诊断和解决常见问题。</p>
+
+                <h3>调试技巧</h3>
+                <ul>
+                    <li>使用调试器</li>
+                    <li>日志分析</li>
+                    <li>性能分析工具</li>
+                </ul>
+
+                <h3>常见问题</h3>
+                <ul>
+                    <li>编译错误</li>
+                    <li>运行时异常</li>
+                    <li>性能问题</li>
+                </ul>
+            </div>
+
+            <div class="doc-section" id="common-questions">
+                <h2>常见问题</h2>
+
+                <h3>问：如何选择适合我的课程？</h3>
+                <p>答：您可以根据自己的基础水平和学习目标来选择。我们提供初级、中级、高级三个等级的课程。</p>
+
+                <h3>问：课程有效期是多久？</h3>
+                <p>答：购买后可以永久观看学习，课程内容会持续更新。</p>
+
+                <h3>问：如何获得学习帮助？</h3>
+                <p>答：您可以通过邮件联系我们的技术支持团队，或在课程评论区提问。</p>
+            </div>
+
+            <div class="doc-section" id="support">
+                <h2>技术支持</h2>
+                <p>如果您在使用过程中遇到任何问题，我们提供以下支持：</p>
+
+                <h3>联系我们</h3>
+                <ul>
+                    <li>邮箱：support@jianxue.com</li>
+                    <li>工作时间：周一至周五 9:00-18:00</li>
+                </ul>
+
+                <h3>社区支持</h3>
+                <p>加入我们的学习社区，与其他学员交流学习心得。</p>
+            </div>
+        </main>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="js/docs.js"></script>
